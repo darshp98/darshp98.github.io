@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link href='https://fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
+
+<title>Darshana's NYC Food Adventures</title>
+<link rel="stylesheet" href="trial.css">
+
+</head>
+
+<body>
+
+<!-- insert stagnant nav bar at top, header div section w/ picture slideshow background, columns with pictures and div sections (personal favorites and recent posts) -->
+
+<!-- nav bar , has to be div to be a full bar-->
+
+	<div class="navbar">
+		<li><a href="#" class="active">Home</a></li>
+		<li><a href="blogposts.html">Blog Posts</a></li>
+		<li><a href="aboutme.html">About Me</a></li>
+	</div>
+
+
+
+<!-- header, pic slideshow, social media links -->
+
+	<div class="slideshow">
+		<div class="slide fade">
+			<img src="nyc2.jpg" style="width:100%">
+		</div>
+
+
+		<div class="slide fade">
+			<img src="slide2.jpg" style="width:100%">
+		</div>
+
+		<div class="slide fade">
+			<img src="slide3.jpg" style="width:100%">
+		</div>
+
+		
+		<div class="slide fade">
+			<img src="slide4.jpg" style="width:100%">
+		</div>
+
+		<h1 style="font-size:60px;">Darshana's NYC Food Adventures</h1>
+	</div>
+
+
+<!-- javascript function to show slides -->
+
+	<script>
+		var slideindex = 0;
+		slideshow();
+
+		function slideshow() {
+		    var i;
+		    var slides = document.getElementsByClassName("slide");
+		   
+		    for (i = 0; i < slides.length; i++) {
+
+		       slides[i].style.display = "none";  
+
+		    }
+
+		    slideindex++;
+
+			if (slideindex > slides.length) {
+
+			slideindex = 1
+			}    
+
+		    slides[slideindex-1].style.display = "block";  
+
+// to change slides every 2 sec
+
+		    setTimeout(slideshow, 2000); 
+		}
+
+
+	</script>
+
+
+	<div class="h2">
+
+<h2 style="font-size:25px;">PERSONAL FAVORITES</h2>
+
+</div>
+
+<div class="container">
+
+
+
+	<div class="foodpic catch">
+		<a href="#">
+
+
+			<img src="catch.jpg">
+
+			<div class="overlay">
+				<div class="text">This place has all the aesthetically pleasing foods and sights you could've asked for!</div>
+			</div>
+
+			<p>Catch NYC</p>
+		</a>
+
+	</div>
+
+	<div class="foodpic catch">
+			<a href="#">
+					<img src="barprimi.jpg">
+
+					<div class="overlay">
+				<div class="text">This bar serves the best pasta you would have ever tasted!</div>
+			</div>
+					<p>Bar Primi</p>
+</a>
+	</div>
+
+		<div class="foodpic catch">
+					<a href="#">
+						<img src="phebes2.jpg">
+
+						<div class="overlay">
+				<div class="text">It's a place perfect for brunch and Sunday football games!</div>
+			</div>
+						<p>Phebe's</p>
+</a>
+	</div>
+
+</div>
+
+<div class="h3">
+
+	<h3 style="font-size:25px;">RECENT POSTS</h3>
+
+</div>
+
+<div class="container2">
+
+	<div class="foodpic catch">
+		<a href="#">
+		<img src="bychloe.jpg">
+
+		<div class="overlay">
+				<div class="text">March 13th, 2018</div>
+			</div>
+</a>
+		<p>By Chloe's</p>
+
+	</div>
+
+		<div class="foodpic catch">
+			<a href="#">
+		<img src="vandal.jpg">
+
+		<div class="overlay">
+				<div class="text">March 17th, 2018</div>
+			</div>
+</a>
+		<p>Vandal</p>
+
+	</div>
+
+</div>
+
+
+	</body>
+
+	</html>

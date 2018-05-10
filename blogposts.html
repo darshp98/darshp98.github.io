@@ -13,24 +13,71 @@
 <body>
 
 
-
-		<!-- first heading -->
-		<!-- might have to increase font size -->
-		<div class="first">
-		<h1 style="font-size:60px;">Darshana's NYC Food Adventures</h1>
-<!-- might have to decrease font size; subheading -->
-<!-- might have to make subheading a paragraph -->
-
-		<nav>
-			<ul>
-				<li><a href="homepage.html">Home</a></li>
-				<!-- link the other tab links instead of # -->
-				<li><a href="#" class="active">Blog Posts</a></li>
-				<li><a href="aboutme.html">About Me</a></li>
-			</ul>
-		</nav>
+<div class="navbar">
+		<li><a href="homepage2.html">Home</a></li>
+		<li><a href="#" class="active">Blog Posts</a></li>
+		<li><a href="aboutme.html">About Me</a></li>
 	</div>
 
+
+
+<!-- header, pic slideshow, social media links -->
+
+	<div class="slideshow">
+		<div class="slide fade">
+			<img src="nyc2.jpg" style="width:100%">
+		</div>
+
+
+		<div class="slide fade">
+			<img src="slide2.jpg" style="width:100%">
+		</div>
+
+		<div class="slide fade">
+			<img src="slide3.jpg" style="width:100%">
+		</div>
+
+		
+		<div class="slide fade">
+			<img src="slide4.jpg" style="width:100%">
+		</div>
+
+		<h1 style="font-size:60px;">Darshana's NYC Food Adventures</h1>
+	</div>
+
+
+<!-- javascript function to show slides -->
+
+	<script>
+		var slideindex = 0;
+		slideshow();
+
+		function slideshow() {
+		    var i;
+		    var slides = document.getElementsByClassName("slide");
+		   
+		    for (i = 0; i < slides.length; i++) {
+
+		       slides[i].style.display = "none";  
+
+		    }
+
+		    slideindex++;
+
+			if (slideindex > slides.length) {
+
+			slideindex = 1
+			}    
+
+		    slides[slideindex-1].style.display = "block";  
+
+// to change slides every 2 sec
+
+		    setTimeout(slideshow, 2000); 
+		}
+
+
+	</script>
 
 <div class="manhattan">
 
@@ -45,7 +92,7 @@
 	<div class="container">
 
 			<div class="foodpic primi">
-			<a href="#">
+			<a href="barprimi.html">
 					<img src="barprimi.jpg">
 					<div class="overlay">
 						<div class="text">This restaurant has many flavorful options available. I personally reccomend the squid ink pasta!</div>
@@ -57,7 +104,7 @@
 	</div>
 
 		<div class="foodpic phebes">
-					<a href="#">
+					<a href="phebes.html">
 						<img src="phebes2.jpg">
 						<div class="overlay">
 						<div class="text">Considering that this place is two blocks away from my dorm, I eat the nachos here way too often.</div>
@@ -83,7 +130,7 @@
 	<div class="container">
 
 			<div class="foodpic primi">
-			<a href="#">
+			<a href="friendofafarmer.html">
 					<img src="friendofafarmer.jpg">
 					<div class="overlay">
 						<div class="text">Located in Brooklyn Heights, this quaint and homely restaurant is sure to satisfy your stomach.</div>
@@ -95,7 +142,7 @@
 	</div>
 
 		<div class="foodpic phebes">
-					<a href="#">
+					<a href="grimaldis.html">
 						<img src="grimaldis.jpg">
 						<div class="overlay">
 						<div class="text">If you're in the mood for some classic NY pizza, then you should definitely check out Grimaldi's in DUMBO.</div>
