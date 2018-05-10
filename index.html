@@ -1,37 +1,89 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
 <link href='https://fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
-	<!-- what will show in the tab -->
-	<title>Darshana's NYC Food Adventures</title>
-<!-- link to css sheet -->
-	<link rel="stylesheet" href="homepage.css">
+
+<title>Darshana's NYC Food Adventures</title>
+<link rel="stylesheet" href="trial.css">
 
 </head>
 
 <body>
 
+<!-- insert stagnant nav bar at top, header div section w/ picture slideshow background, columns with pictures and div sections (personal favorites and recent posts) -->
 
+<!-- nav bar , has to be div to be a full bar-->
 
-		<!-- first heading -->
-		<!-- might have to increase font size -->
-		<div class="first">
-		<h1 style="font-size:60px;">Darshana's NYC Food Adventures</h1>
-<!-- might have to decrease font size; subheading -->
-<!-- might have to make subheading a paragraph -->
-
-		<nav>
-			<ul>
-				<li><a href="#" class="active">Home</a></li>
-				<!-- link the other tab links instead of # -->
-				<li><a href="blogposts.html">Blog Posts</a></li>
-				<li><a href="aboutme.html">About Me</a></li>
-			</ul>
-		</nav>
+	<div class="navbar">
+		<li><a href="#" class="active">Home</a></li>
+		<li><a href="blogposts.html">Blog Posts</a></li>
+		<li><a href="aboutme.html">About Me</a></li>
 	</div>
 
-<div class="h2">
+
+
+<!-- header, pic slideshow, social media links -->
+
+	<div class="slideshow">
+		<div class="slide fade">
+			<img src="nyc2.jpg" style="width:100%">
+		</div>
+
+
+		<div class="slide fade">
+			<img src="slide2.jpg" style="width:100%">
+		</div>
+
+		<div class="slide fade">
+			<img src="slide3.jpg" style="width:100%">
+		</div>
+
+		
+		<div class="slide fade">
+			<img src="slide4.jpg" style="width:100%">
+		</div>
+
+		<h1 style="font-size:60px;">Darshana's NYC Food Adventures</h1>
+	</div>
+
+
+<!-- javascript function to show slides -->
+
+	<script>
+		var slideindex = 0;
+		slideshow();
+
+		function slideshow() {
+		    var i;
+		    var slides = document.getElementsByClassName("slide");
+		   
+		    for (i = 0; i < slides.length; i++) {
+
+		       slides[i].style.display = "none";  
+
+		    }
+
+		    slideindex++;
+
+			if (slideindex > slides.length) {
+
+			slideindex = 1
+			}    
+
+		    slides[slideindex-1].style.display = "block";  
+
+// to change slides every 2 sec
+
+		    setTimeout(slideshow, 2000); 
+		}
+
+
+	</script>
+
+
+	<div class="h2">
 
 <h2 style="font-size:25px;">PERSONAL FAVORITES</h2>
 
@@ -42,7 +94,7 @@
 
 
 	<div class="foodpic catch">
-		<a href="#">
+		<a href="catch.html">
 
 
 			<img src="catch.jpg">
@@ -56,8 +108,8 @@
 
 	</div>
 
-	<div class="foodpic primi">
-			<a href="#">
+	<div class="foodpic catch">
+			<a href="barprimi.html">
 					<img src="barprimi.jpg">
 
 					<div class="overlay">
@@ -67,8 +119,8 @@
 </a>
 	</div>
 
-		<div class="foodpic phebes">
-					<a href="#">
+		<div class="foodpic catch">
+					<a href="phebes.html">
 						<img src="phebes2.jpg">
 
 						<div class="overlay">
@@ -88,8 +140,8 @@
 
 <div class="container2">
 
-	<div class="foodpic bychloe">
-		<a href="#">
+	<div class="foodpic catch">
+		<a href="bychloe.html">
 		<img src="bychloe.jpg">
 
 		<div class="overlay">
@@ -100,8 +152,8 @@
 
 	</div>
 
-		<div class="foodpic vandal">
-			<a href="#">
+		<div class="foodpic catch">
+			<a href="vandal.html">
 		<img src="vandal.jpg">
 
 		<div class="overlay">
@@ -112,14 +164,9 @@
 
 	</div>
 
-
-
-
 </div>
 
 
-</body>
+	</body>
 
-</html>
-
-
+	</html>
